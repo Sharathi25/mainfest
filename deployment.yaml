@@ -10,13 +10,13 @@ spec:
   selector:
     matchLabels:
       app: hello-java
-template:
-  metadata:
-    labels:
-      app: hello-java
-spec:
-  containers:
-    - name: hello-java
-      image: sharathi25/hello-java:latest
-      ports:
-        - containerPort: 8080
+  template: # <-- This should be inside "spec"
+    metadata:
+      labels:
+        app: hello-java
+    spec:
+      containers: # <-- This should be inside "template.spec"
+        - name: hello-java
+          image: sharathi25/hello-java:latest
+          ports:
+            - containerPort: 8080
