@@ -15,9 +15,10 @@ spec:
       labels:
         app: hello-java
     spec:
-      containers: # <-- This should be inside "template.spec"
-        - name: hello-java
-          image: sharathi25/hello-java:latest
-          imagePullPolicy: Always
-          ports:
-            - containerPort: 8080
+  containers:
+    - name: hello-java
+      image: sharathi25/hello-java:latest
+  imagePullSecrets:
+    - name: regcred
+      ports:
+        - containerPort: 8080
