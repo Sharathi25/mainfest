@@ -18,5 +18,6 @@ spec:
       containers: # <-- This should be inside "template.spec"
         - name: hello-java
           image: sharathi25/hello-java:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
