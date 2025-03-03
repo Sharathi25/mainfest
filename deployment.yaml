@@ -14,7 +14,6 @@ spec:
     metadata:
       labels:
         app: hello-java
-    spec:
   containers:
     - name: hello-java
       image: sharathi25/hello-java:latest
