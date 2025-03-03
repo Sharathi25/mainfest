@@ -1,7 +1,7 @@
 apiVersion: apps/V1
 kind: Deployment
 metadata:
-  name: hello-java
+  # name: hello-java
   namespace: java
   labels:
     app: hello-java
