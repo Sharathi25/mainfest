@@ -1,0 +1,22 @@
+apiVersion: apps/V1
+kind: Deployment
+metadata:
+  name: hello-java
+  namespace: java
+  labels:
+    app: hello-java
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-java
+template:
+  metadata:
+    labels:
+      app: hello-java
+spec:
+  containers:
+    - name: hello-java
+      image: sharathi25/hello-java:latest
+      ports:
+        - containerPort: 8080
